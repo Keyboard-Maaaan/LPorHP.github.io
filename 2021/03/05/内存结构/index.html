@@ -9,21 +9,21 @@
   <meta name="description" content="内存结构程序计数器  作用: 记住下一条Jvm指令的地址  特点：  线程私有（每条线程都有一个程序计数器，线程时间片轮换后回到原有线程的指令位置）  不会存在内存溢出的问题      虚拟机栈 定义 每个线程运行时需要的内存，成为虚拟机栈 每个栈由多个栈帧组成，对应每次方法调用所占用的内存 每个线程只能有一个活动栈帧，对应当前正在执行的方法     注意  垃圾回收不会涉及栈内存（方法执行完后栈">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2021/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:url" content="http://lporhp.github.io/2021/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="内存结构程序计数器  作用: 记住下一条Jvm指令的地址  特点：  线程私有（每条线程都有一个程序计数器，线程时间片轮换后回到原有线程的指令位置）  不会存在内存溢出的问题      虚拟机栈 定义 每个线程运行时需要的内存，成为虚拟机栈 每个栈由多个栈帧组成，对应每次方法调用所占用的内存 每个线程只能有一个活动栈帧，对应当前正在执行的方法     注意  垃圾回收不会涉及栈内存（方法执行完后栈">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/.com//image-20210206183856167.png">
-<meta property="og:image" content="http://example.com/.com//image-20210206184740541.png">
-<meta property="og:image" content="http://example.com/.com//Asset/image-20210207170310435.png">
-<meta property="og:image" content="http://example.com/.com//Asset/image-20210207170328896.png">
-<meta property="og:image" content="http://example.com/.com//Asset/image-20210208204330920.png">
-<meta property="og:image" content="http://example.com/.com//Asset/image-20210208204753421.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206183856167.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206184740541.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210207170310435.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210207170328896.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210208204330920.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210208204753421.png">
 <meta property="article:published_time" content="2021-03-05T04:18:16.835Z">
 <meta property="article:modified_time" content="2021-03-05T04:19:24.448Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/.com//image-20210206183856167.png">
+<meta name="twitter:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206183856167.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -73,7 +73,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://LPorHP.github.io"></form>
       </div>
     </div>
   </div>
@@ -92,7 +92,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="内存结构"><a href="#内存结构" class="headerlink" title="内存结构"></a>内存结构</h1><h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><p><img src="/.com//image-20210206183856167.png" alt="image-20210206183856167"></p>
+        <h1 id="内存结构"><a href="#内存结构" class="headerlink" title="内存结构"></a>内存结构</h1><h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><p><img src="/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206183856167.png" alt="image-20210206183856167"></p>
 <ul>
 <li><p>作用: 记住下一条Jvm指令的地址</p>
 </li>
@@ -105,7 +105,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/.com//image-20210206184740541.png" alt="image-20210206184740541"></p>
+<p><img src="/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206184740541.png" alt="image-20210206184740541"></p>
 <h3 id="虚拟机栈"><a href="#虚拟机栈" class="headerlink" title="虚拟机栈"></a>虚拟机栈</h3><ol>
 <li>定义<ul>
 <li>每个线程运行时需要的内存，成为虚拟机栈</li>
@@ -161,9 +161,9 @@
 <li>如果方法区申请的内存不足时，会抛出OutofMemorryERROR</li>
 </ol>
 <p>1.6</p>
-<p><img src="/.com//Asset/image-20210207170310435.png" alt="image-20210207170310435"></p>
+<p><img src="/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210207170310435.png" alt="image-20210207170310435"></p>
 <p>1.8</p>
-<p><img src="/.com//Asset/image-20210207170328896.png" alt="image-20210207170328896"></p>
+<p><img src="/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210207170328896.png" alt="image-20210207170328896"></p>
 <p>​            </p>
 <h4 id="方法区内存溢出"><a href="#方法区内存溢出" class="headerlink" title="方法区内存溢出"></a>方法区内存溢出</h4><ul>
 <li>1.8之前会导致永久代内存溢出</li>
@@ -204,13 +204,13 @@
 <li>不受JVM内存回收管理</li>
 </ol>
 <p>不使用直接内存时，磁盘文件先读取到系统缓冲区，由于java不能否直接读取使用系统缓冲区的数据，所以需要开辟一个java缓冲区来接收系统缓冲区的数据</p>
-<p><img src="/.com//Asset/image-20210208204330920.png" alt="image-20210208204330920"></p>
-<p><img src="/.com//Asset/image-20210208204753421.png" alt="image-20210208204753421"></p>
+<p><img src="/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210208204330920.png" alt="image-20210208204330920"></p>
+<p><img src="/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210208204753421.png" alt="image-20210208204753421"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/" data-id="cklvt8nzl000314ww3sbtd9qx" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://lporhp.github.io/2021/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/" data-id="cklw1nqr40002lswwhwj60qja" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -268,10 +268,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2021/03/05/text/">text</a>
-          </li>
         
           <li>
             <a href="/2021/03/05/test/">test</a>
