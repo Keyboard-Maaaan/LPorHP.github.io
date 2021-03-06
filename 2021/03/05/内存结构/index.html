@@ -9,21 +9,21 @@
   <meta name="description" content="内存结构程序计数器  作用: 记住下一条Jvm指令的地址  特点：  线程私有（每条线程都有一个程序计数器，线程时间片轮换后回到原有线程的指令位置）  不会存在内存溢出的问题      虚拟机栈 定义 每个线程运行时需要的内存，成为虚拟机栈 每个栈由多个栈帧组成，对应每次方法调用所占用的内存 每个线程只能有一个活动栈帧，对应当前正在执行的方法     注意  垃圾回收不会涉及栈内存（方法执行完后栈">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://lporhp.gitee.io/2021/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:url" content="http://lporhp.github.io/2021/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="内存结构程序计数器  作用: 记住下一条Jvm指令的地址  特点：  线程私有（每条线程都有一个程序计数器，线程时间片轮换后回到原有线程的指令位置）  不会存在内存溢出的问题      虚拟机栈 定义 每个线程运行时需要的内存，成为虚拟机栈 每个栈由多个栈帧组成，对应每次方法调用所占用的内存 每个线程只能有一个活动栈帧，对应当前正在执行的方法     注意  垃圾回收不会涉及栈内存（方法执行完后栈">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://lporhp.gitee.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206183856167.png">
-<meta property="og:image" content="http://lporhp.gitee.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206184740541.png">
-<meta property="og:image" content="http://lporhp.gitee.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210207170310435.png">
-<meta property="og:image" content="http://lporhp.gitee.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210207170328896.png">
-<meta property="og:image" content="http://lporhp.gitee.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210208204330920.png">
-<meta property="og:image" content="http://lporhp.gitee.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210208204753421.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206183856167.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206184740541.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210207170310435.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210207170328896.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210208204330920.png">
+<meta property="og:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/Asset/image-20210208204753421.png">
 <meta property="article:published_time" content="2021-03-05T04:18:16.835Z">
 <meta property="article:modified_time" content="2021-03-05T04:19:24.448Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://lporhp.gitee.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206183856167.png">
+<meta name="twitter:image" content="http://lporhp.github.io/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/image-20210206183856167.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -73,7 +73,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://LPorHP.gitee.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://LPorHP.github.io"></form>
       </div>
     </div>
   </div>
@@ -210,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lporhp.gitee.io/2021/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/" data-id="cklwfebxj0001zsww3k41hdkt" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://lporhp.github.io/2021/03/05/%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/" data-id="cklx39eov0000r4wwhz5k9p3u" data-title="" class="article-share-link">Share</a>
       
       
       
